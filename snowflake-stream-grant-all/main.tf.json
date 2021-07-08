@@ -39,7 +39,6 @@
   },
   "locals": {
     "privileges": [
-      "OWNERSHIP",
       "SELECT"
     ]
   },
