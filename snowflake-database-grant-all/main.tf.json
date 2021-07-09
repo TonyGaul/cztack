@@ -29,7 +29,8 @@
   },
   "locals": {
     "privileges": [
-      "CREATE SCHEMA",      
+      "CREATE SCHEMA",
+      "IMPORTED PRIVILEGES",
       "MODIFY",
       "MONITOR",
       "REFERENCE_USAGE",
