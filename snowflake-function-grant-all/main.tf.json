@@ -68,7 +68,7 @@
         "privilege": "${each.value}",
         "return_type": "${var.return_type}",
         "roles": "${setunion(\n\t\t\t\tvar.roles,\n\t\t\t\tlookup(var.per_privilege_grants, each.value, { shares = [], roles = [] }).roles,\n\t\t\t\t)}",
-        "schema_name": false,
+        "schema_name": "${var.schema_name}",
         "shares": "${length(coalesce(var.shares, [])) == 0 ? null : setunion(\n\t\t\t\tvar.shares,\n\t\t\t\tlookup(var.per_privilege_grants, each.value, { shares = [], roles = [] }).shares,\n\t\t\t\t)}",
         "with_grant_option": "${var.with_grant_option}"
       }
